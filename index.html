@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <title>情侣容忍阈值测试</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+        }
+
+        .question {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .question:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            transform: translateY(-3px);
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            outline: none;
+            margin-right: 10px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="radio"]:checked {
+            border-color: #007BFF;
+            background-color: #007BFF;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        label:hover {
+            color: #007BFF;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            color: #007BFF;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 32px;
+        }
+    </style>
+</head>
+
+<body class="p-8">
+    <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+        <h1 class="text-center">情侣容忍阈值测试</h1>
+        <form id="testForm">
+            <div class="question">
+                <p class="text-lg font-medium mb-2">1. 当你的伴侣忘记你们的重要纪念日时，你会？</p>
+                <label>
+                    <input type="radio" name="q1" value="1">
+                    非常生气，觉得对方不在乎自己
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="2">
+                    有点失望，但会提醒对方
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="3">
+                    觉得无所谓，可能对方太忙了
+                </label>
+            </div>
+            <div class="question">
+                <p class="text-lg font-medium mb-2">2. 伴侣总是和异性朋友单独出去，你会？</p>
+                <label>
+                    <input type="radio" name="q2" value="1">
+                    强烈反对，要求对方停止
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="2">
+                    有点介意，会和对方沟通
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="3">
+                    相信对方，不干涉
+                </label>
+            </div>
+            <div class="question">
+                <p class="text-lg font-medium mb-2">3. 伴侣经常打游戏忽略你，你会？</p>
+                <label>
+                    <input type="radio" name="q3" value="1">
+                    大发脾气，禁止对方打游戏
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="2">
+                    提醒对方，希望对方多陪陪自己
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="3">
+                    自己找点事做，不打扰对方
+                </label>
+            </div>
+            <div class="question">
+                <p class="text-lg font-medium mb-2">4. 伴侣在公共场合和你大声争吵，你会？</p>
+                <label>
+                    <input type="radio" name="q4" value="1">
+                    非常尴尬，立刻离开现场
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="2">
+                    和对方理论，不轻易妥协
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="3">
+                    先冷静下来，回家再谈
+                </label>
+            </div>
+            <div class="question">
+                <p class="text-lg font-medium mb-2">5. 伴侣未经你同意翻看你的手机，你会？</p>
+                <label>
+                    <input type="radio" name="q5" value="1">
+                    很生气，觉得对方不尊重自己的隐私
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="2">
+                    有点不舒服，但会和对方沟通
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="3">
+                    觉得无所谓，反正自己没什么秘密
+                </label>
+            </div>
+            <div class="question">
+                <p class="text-lg font-medium mb-2">6. 伴侣总是迟到，你会？</p>
+                <label>
+                    <input type="radio" name="q6" value="1">
+                    非常恼火，觉得对方不重视约定
+                </label>
+                <label>
+                    <input type="radio" name="q6" value="2">
+                    提醒对方，希望对方改正
+                </label>
+                <label>
+                    <input type="radio" name="q6" value="3">
+                    无所谓，自己也可以利用这段时间做其他事
+                </label>
+            </div>
+            <div class="question">
+                <p class="text-lg font-medium mb-2">7. 伴侣和你的消费观念差异很大，你会？</p>
+                <label>
+                    <input type="radio" name="q7" value="1">
+                    经常因为消费问题吵架，无法调和
+                </label>
+                <label>
+                    <input type="radio" name="q7" value="2">
+                    尝试和对方沟通，寻找平衡点
+                </label>
+                <label>
+                    <input type="radio" name="q7" value="3">
+                    尊重对方的消费观念，互不干涉
+                </label>
+            </div>
+            <div class="question">
+                <p class="text-lg font-medium mb-2">8. 伴侣总是在你工作或学习时打扰你，你会？</p>
+                <label>
+                    <input type="radio" name="q8" value="1">
+                    很生气，让对方不要打扰自己
+                </label>
+                <label>
+                    <input type="radio" name="q8" value="2">
+                    和对方说明情况，希望对方理解
+                </label>
+                <label>
+                    <input type="radio" name="q8" value="3">
+                    放下手中的事，陪对方一会儿
+                </label>
+            </div>
+            <div class="question">
+                <p class="text-lg font-medium mb-2">9. 伴侣不喜欢参加你朋友的聚会，你会？</p>
+                <label>
+                    <input type="radio" name="q9" value="1">
+                    很不开心，觉得对方不给自己面子
+                </label>
+                <label>
+                    <input type="radio" name="q9" value="2">
+                    和对方沟通，了解原因
+                </label>
+                <label>
+                    <input type="radio" name="q9" value="3">
+                    尊重对方的选择，不强求
+                </label>
+            </div>
+            <div class="question">
+                <p class="text-lg font-medium mb-2">10. 伴侣的生活习惯和你差异很大，你会？</p>
+                <label>
+                    <input type="radio" name="q10" value="1">
+                    很难忍受，要求对方改变
+                </label>
+                <label>
+                    <input type="radio" name="q10" value="2">
+                    尝试适应对方，同时也让对方做出一些改变
+                </label>
+                <label>
+                    <input type="radio" name="q10" value="3">
+                    尊重对方的习惯，求同存异
+                </label>
+            </div>
+            <button type="button" onclick="submitTest()">提交测试</button>
+        </form>
+    </div>
+
+    <script>
+        function submitTest() {
+            const form = document.getElementById('testForm');
+            const formData = new FormData(form);
+            let score = 0;
+            for (let value of formData.values()) {
+                score += parseInt(value);
+            }
+            // 转换为 100 分制
+            const hundredScore = (score / 30) * 100;
+            const resultText = getResultText(score);
+            const params = new URLSearchParams();
+            params.append('score', hundredScore.toFixed(2));
+            params.append('text', resultText);
+            window.location.href = `result.html?${params.toString()}`;
+        }
+
+        function getResultText(score) {
+            if (score <= 15) {
+                return '你的容忍阈值较低，在关系中可能对很多事情比较敏感，需要对方更多的关注和理解。';
+            } else if (score <= 25) {
+                return '你的容忍阈值处于中等水平，能够在一定程度上理解和包容对方，但也有自己的底线。';
+            } else {
+                return '你的容忍阈值较高，在关系中比较大度和包容，能够给予对方较大的自由空间。';
+            }
+        }
+    </script>
+</body>
+
+</html>
+    
